@@ -1,20 +1,32 @@
 <template>
+  
     <div class="container">
-      <div class="row">
-        <div class="col-md-3" v-for="product in products" :key="product.id">
-          <div class="card">
-            <img width="200" height="200" :src="product.image" class="card-img-top" alt="Product Image">
-            <div class="card-body">
-              <h5 class="card-title">{{ product.name }}</h5>
-              <p class="card-text">{{ product.price }} € <br>
-                Category: {{ product.category }}
-                <a href="#">Voir</a>
-            </p>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card text-center">
+        <div class="card-header">
+          <h3>Products list</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-3" v-for="product in products" :key="product.id">
+              <div class="card mb-4">
+                <img width="200" height="200" :src="product.image" class="card-img-top" alt="Product Image">
+                <div class="card-body">
+                  <h5 class="card-title">{{ product.name }}</h5>
+                  <p class="card-text">{{ product.price }} €</p>
+                  <p class="card-text">Category: {{ product.category }}</p>
+                  <a href="#" class="btn btn-primary">View</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
+
     <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-6">

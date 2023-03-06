@@ -50,7 +50,7 @@
               </div>
             </div>
           </form><br>
-          <p>Already have an account? <a href="#" @click="showSinInForm"> Sin in herer</a></p>
+          <p>Already have an account? <a href="#" @click="showSinInForm"> Sing in herer</a></p>
         </div>
       </div>
     </div>
@@ -65,22 +65,22 @@
       <div class="card">
         <div class="card-header">Connexion</div>
         <div class="card-body">
-          <form>
+          <form @submit.prevent="login">
             <div class="form-group row">
-              <label for="telephone" class="col-sm-4 col-form-label">Numéro de téléphone</label>
+              <label for="telephone" class="col-sm-4 col-form-label">Phone number</label>
               <div class="col-sm-8">
-                <input type="tel" class="form-control" id="telephone" placeholder="Votre numéro de téléphone">
+                <input type="tel" class="form-control" id="telephone" placeholder="Your phone number">
               </div>
             </div>
             <div class="form-group row">
-              <label for="password" class="col-sm-4 col-form-label">Mot de passe</label>
+              <label for="password" class="col-sm-4 col-form-label">Password</label>
               <div class="col-sm-8">
-                <input type="password" class="form-control" id="password" placeholder="Votre mot de passe">
+                <input type="password" class="form-control" id="password" placeholder="Your password">
               </div>
             </div><br>
             <div class="form-group row">
               <div class="col-sm-8 offset-sm-4">
-                <button class="btn btn-primary" type="submit">Se connecter</button>
+                <button class="btn btn-primary" type="submit">Connect</button>
                 
               </div>
             </div>
@@ -112,6 +112,9 @@ export default {
             this.sinIn = true
             this.sinUp = false
 
+        },
+        login(){
+            alert("The system is not complete. Come back later")
         }
     }
 

@@ -2,7 +2,7 @@
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/categories">Categoies</router-link>  | 
-    <router-link to="/auth">Mon compte</router-link>
+    <router-link to="/auth">My account</router-link>
   </nav>
   <router-view/>
 
