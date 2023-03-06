@@ -6,7 +6,8 @@
             <img width="200" height="200" :src="product.image" class="card-img-top" alt="Product Image">
             <div class="card-body">
               <h5 class="card-title">{{ product.name }}</h5>
-              <p class="card-text">{{ product.price }} € 
+              <p class="card-text">{{ product.price }} € <br>
+                Category: {{ product.category }}
                 <a href="#">Voir</a>
             </p>
             </div>
@@ -30,6 +31,10 @@
             <div class="form-group">
               <label for="productprice">Product Price</label>
               <input v-model="newProduct.price" type="number" class="form-control" id="productprice">
+            </div>
+            <div class="form-group">
+              <label for="productcategory"> Category</label>
+              <input v-model="newProduct.category" type="text" class="form-control">
             </div>
             <div class="form-group">
               <label for="productimage">Product Image URL</label>
@@ -57,44 +62,53 @@ export default {
           id: 1,
           name: 'Product 1',
           price: 10,
+          category: ' Any',
           image: 'https://cdn.monoprix.fr/cdn-cgi/image/width=600,quality=80,format=auto,metadata=none/assets/images/fashion/3612305316914/1/1900x1900.jpg',
         },
         {
           id: 2,
           name: 'Product 2',
           price: 15,
+          category: ' Any',
           image: 'https://media.i-run.fr/2022/Marques/Nike/Trail/2022-11-01/Nike-Zegama.png',
         },
         {
           id: 3,
           name: 'Product 3',
           price: 20,
+          category: 'Any',
           image: 'https://images.radio-canada.ca/q_auto,w_844/v1/alimentation/ingredient/16x9/mangue-ingredients-mordu.jpg',
         },
         {
           id: 5,
           name: 'Product 1',
           price: 10,
+          category: ' Any',
           image: 'https://cdn.monoprix.fr/cdn-cgi/image/width=600,quality=80,format=auto,metadata=none/assets/images/fashion/3612305316914/1/1900x1900.jpg',
         },
         {
           id: 4,
           name: 'Product 3',
           price: 20,
+          category: ' Any',
           image: 'https://images.radio-canada.ca/q_auto,w_844/v1/alimentation/ingredient/16x9/mangue-ingredients-mordu.jpg',
         },
         {
           id: 6,
           name: 'Product 4',
           price: 30,
+          category: ' Any',
           image: 'https://images-na.ssl-images-amazon.com/images/I/71sgF5NwG6S._AC_SX679_.jpg',
         },
       ],
       newProduct: {
         name: '',
         price: '',
+        category: 'Any',
         image: '',
       },
+      ShowProductList: true,
+      ShowProductForm: false,
     };
   },
   methods: {
@@ -105,6 +119,7 @@ export default {
         this.newProduct = {
           name: '',
           price: '',
+          category: ' Any',
           image: '',
         };
         alert('Product added successfully');
