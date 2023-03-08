@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <FromChildToParent @clothes="getClothes"/>
+    <h1>Nos produits</h1>
     <div v-for="pr in prod" :key="pr.id" class="card">
       <div class="card-header">
         <h2 class="card-title">{{ pr.name }}</h2>
